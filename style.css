@@ -1,0 +1,178 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Style for the navbar */
+.navbar {
+     
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2e5d63;
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;           
+    left: 0;
+    width: 100%; 
+    z-index: 10;
+    
+    
+    
+}
+
+/* Logo section */
+.logo img {
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+/* Title section */
+.title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Menu styling */
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Dropdown menu styles */
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    background-color: #0575ed;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Language and login buttons */
+
+#langBtn {
+    padding: 8px 12px;
+    border: none;
+    background-color: #48a2c0;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#loginBtn {
+    padding: 8px 12px;
+    border: none;
+    background-color: #378846;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#langBtn:hover,
+#loginBtn:hover {
+    background-color: #777;
+}
+
+/*sidebar*/
+
+.sidebar {
+    width: 200px;
+    background-color: #34495e;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    padding-top: 150px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px 20px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar ul li a i {
+    margin-right: 10px;
+}
+
+.sidebar ul li a:hover {
+    background-color: #3c6382;
+    border-radius: 4px;
+}
+
+/* Main content */
+.main-content {
+    margin-left: 200px;
+    padding: 20px;
+    padding-top: 100px;
+    background-color: #f0f0f0;
+    min-height: 100vh;
+
+    h1 {
+  font-size: 3.5vw; 
+}
+
+p {
+
+  font-size: 1.5vw;
+}
+
+h1 {
+  margin-bottom: 7px;  
+}
+
+p {
+
+  line-height: 1.6;     
+  padding: 10px;        
+}
+
+    display: flex;               
+    justify-content: center;    
+    align-items: center;        
+    flex-direction: column;     
+    text-align: center;         
+}
