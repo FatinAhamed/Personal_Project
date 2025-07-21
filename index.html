@@ -10,24 +10,41 @@
 </head>
 
 <body>
+
     <nav class="navbar">
+
+        <!-- Logo -->
+
         <div class="logo">
-    <img src="My_Portfolio_Logo.png" alt="Logo" width="70" height="70">
-    <p>Fatin Ahamed</p>
 
-</div>
-        <div class="title"> Portfolio of Fatin Ahamed Arnab</div>
+            <img src="./public/photos/My_Portfolio_Logo.png" alt="Logo" width="70" height="70">
 
-        <div class="Dropdown menu">
+            <p>Fatin Ahamed</p>
+
+        </div>
+        <div class="title"> PERSONAL WEBSITE OF FATIN AHAMED ARNAB</div>
+
+        <!-- Dropdown menu -->
+
+        <div class="menu">
+
+            <!-- My Work Dropdown -->
+
             <div class="dropdown">
+
                 <button class="dropbtn">My Work</button>
+
                 <div class="dropdown-content">
-                    <a href="#">Work Name</a>
-                    <a href="#">Screen Shot</a>
-                    <a href="#">Link</a>
+
+                    <button onclick="showSection('work-name')">Work Name</button>
+                    <button onclick="showSection('screenshots')">Screen Shot</button>
+                    <button onclick="showSection('project-links')">Link</button>
+
                 </div>
+
             </div>
 
+            <!-- Menu Dropdown -->
 
             <div class="dropdown">
                 <button class="dropbtn">Menu</button>
@@ -38,34 +55,188 @@
 
             </div>
 
+            <!-- Language and Login and Logout Buttons -->
 
             <button id="langBtn">EN</button>
             <button id="loginBtn">Login</button>
-</div>
+            <button id="logoutBtn" style="display: none;">Logout</button>
+
+        </div>
 
     </nav>
 
- <!-- Sidebar -->
- <div class="sidebar">
+    <!-- Sidebar -->
+
+    <div class="sidebar">
+
         <ul>
-            <li><a href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
-            <li><a href="#"><i class="fas fa-home"></i> Home Page</a></li>
-            <li><a href="#"><i class="fas fa-file-alt"></i> My Resume</a></li>
-            <li><a href="#"><i class="fas fa-image"></i> My Photos</a></li>
-            <li><a href="#"><i class="fas fa-pen-nib"></i> My Signature</a></li>
+
+            <li><a href="#" onclick="showSection('dashboard')"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+            <li><a href="#" onclick="showSection('home-page')"><i class="fas fa-home"></i> Home Page</a></li>
+            <li><a href="#" onclick="showSection('my-resume')"><i class="fas fa-file-alt"></i> My Resume</a></li>
+            <li><a href="#" onclick="showSection('my-photos')"><i class="fas fa-image"></i> My Photos</a></li>
+            <li><a href="#" onclick="showSection('my-signature')"><i class="fas fa-pen-nib"></i> My Signature</a></li>
+
         </ul>
+
     </div>
-    
+
     <!-- Main Content -->
+
     <div class="main-content">
 
-    <main>
-        <h1>Welcome to my portfolio 😊</h1>
-        <p>This website showcases my projects and personal information.</p>
-    </main>
-</div>
+        <!-- Dashboard Section (Default visible) -->
 
-    <script src="script.js"></script>
+        <section id="dashboard" class="content-section" style="display: block;">
+
+            <h1>Welcome to my website 😊</h1>
+            <p>This website showcases my projects and personal information.</p>
+        </section>
+
+
+        <!-- Work Name Section -->
+
+        <section id="work-name" class="content-section" style="display: none;">
+
+            <h2 class="mywork-title">My Work Name</h2>
+
+            <ul class="left-list">
+
+                <li>Bangladesh National Parliament</li>
+                <li>Shell BD</li>
+                <li>Personal Website</li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- Screenshot Section -->
+
+        <section id="screenshots" class="content-section" style="display: none;">
+
+            <h2 class="screenshots-title">Project Screenshots</h2>
+
+            <div class="photo-gallery">
+
+                <img src="./public/photos/Parliament1.png" alt="Parliament Screenshot" />
+                <img src="./public/photos/Parliament2.png" alt="Portfolio Screenshot" />
+                <img src="./public/photos/Parliament3.png" alt="Portfolio Screenshot" />
+                <img src="./public/photos/Parliament4.png" alt="Portfolio Screenshot" />
+                <img src="./public/photos/ShellBD.png" alt="Shell BD Screenshot" />
+                <img src="./public/photos/ShellBD1.png" alt="Shell BD Screenshot" />
+                <img src="./public/photos/Portfolio.png" alt="Personal Screenshot" />
+
+
+            </div>
+
+        </section>
+
+
+        <!-- Links Section -->
+
+        <section id="project-links" class="content-section" style="display: none;">
+
+            <h2 class="projectlinks-title">Live Projects / GitHub Links</h2>
+
+            <ul class="left-list">
+
+                <li><a href="https://parliament.dev-polygontech.xyz/" target="_blank">Bangladesh National Parliament</a>
+                </li>
+                <li><a href="https://estore.rkpl.com.bd/" target="_blank">Shell BD</a></li>
+                <li><a href="https://fatinahamed.github.io/Personal_Project/" target="_blank">Personal Website</a></li>
+
+            </ul>
+
+        </section>
+
+        <!-- Home Page Section -->
+
+        <section id="home-page" class="content-section" style="display: none;">
+
+            <h2 class="homepage-title">About Me:</h2>
+
+            <img src="./public/photos/Informal_Photo.jpg" alt="Fatin Ahamed Photo" width="200" />
+
+            <p>Hello! I'm Fatin Ahamed Arnab, a passionate developer and learner. Welcome to my personal website.</p>
+
+        </section>
+
+        <!-- My Resume Section -->
+
+        <section id="my-resume" class="content-section" style="display: none;">
+            <h2>My Resume</h2>
+            <embed src="./public/pdf/Fatin_Resume.pdf" width="80%" height="600px" type="application/pdf">
+
+
+        </section>
+
+        <!-- My Photos Section -->
+
+        <section id="my-photos" class="content-section" style="display: none;">
+
+            <h2 class="gallery-title">My Photos</h2>
+
+            <div class="photo-gallery">
+
+                <img src="./public/photos/Formal_Pic.jpg" alt="Formal Photo" />
+                <img src="./public/photos/Informal_Photo.jpg" alt="Informal Photo" />
+                <img src="./public/photos/Gallery1.jpeg" alt="Gallery1" />
+                <img src="./public/photos/Gallery2.jpg" alt="Gallery2" />
+                <img src="./public/photos/Gallery3.jpg" alt="Gallery3" />
+                <img src="./public/photos/Gallery4.jpg" alt="Gallery4" />
+                <img src="./public/photos/Gallery5.jpg" alt="Gallery5" />
+
+
+            </div>
+
+        </section>
+
+        <!-- My Signature Section -->
+
+        <section id="my-signature" class="content-section" style="display: none;">
+
+            <h2 class="signature-title">My Signature</h2>
+
+            <img src="./public/photos/My_signature.jpg" alt="Signature" width="300" />
+
+        </section>
+
+
+    </div>
+
+
+    <!-- Login Modal -->
+
+    <div id="loginModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeLoginModal()">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm" onsubmit="handleLogin(event)">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+
+                <button type="submit">Login</button>
+            </form>
+            <p id="loginMessage"></p>
+        </div>
+    </div>
+
+    <!-- Logout Confirmation Modal -->
+    <div id="logoutModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <p>Are you sure you want to logout?</p>
+            <button onclick="confirmLogout(true)">Yes</button>
+            <button onclick="confirmLogout(false)">No</button>
+        </div>
+    </div>
+
+
+    <script src="script.js"> </script>
+
 
 </body>
 

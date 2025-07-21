@@ -6,9 +6,13 @@
     font-family: Arial, sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Style for the navbar */
 .navbar {
-     
+
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -16,24 +20,27 @@
     color: white;
     padding: 10px 20px;
     position: fixed;
-    top: 0;           
+    top: 0;
     left: 0;
-    width: 100%; 
+    width: 100%;
     z-index: 10;
-    
-    
-    
+    height: 140px;
+
+
+
 }
 
 /* Logo section */
+
 .logo img {
     border-radius: 50%;
-    margin-left: 20px;
+    margin-left: 50px;
 }
 
 /* Title section */
+
 .title {
-    font-size: 24px;
+    font-size: 35px;
     font-weight: bold;
 }
 
@@ -41,7 +48,7 @@
 .menu {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 16px;
 }
 
 /* Dropdown menu styles */
@@ -58,12 +65,26 @@
     border-radius: 4px;
 }
 
+.dropdown-content button {
+    color: black;
+    background: none;
+    border: none;
+    padding: 8px 12px;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+}
+
+.dropdown-content button:hover {
+    background-color: #ddd;
+}
+
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: white;
     min-width: 120px;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
@@ -102,8 +123,18 @@
     cursor: pointer;
 }
 
+#logoutBtn {
+    padding: 8px 12px;
+    border: none;
+    background-color: #b2253d;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
 #langBtn:hover,
-#loginBtn:hover {
+#loginBtn:hover,
+#logoutBtn:hover {
     background-color: #777;
 }
 
@@ -115,7 +146,7 @@
     height: 100vh;
     position: fixed;
     left: 0;
-    padding-top: 150px;
+    padding-top: 170px;
 }
 
 .sidebar ul {
@@ -150,29 +181,309 @@
     padding-top: 100px;
     background-color: #f0f0f0;
     min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
 
-    h1 {
-  font-size: 3.5vw; 
+.main-content h1 {
+
+
+    font-size: 3.5vw;
 }
 
 p {
 
-  font-size: 1.5vw;
+    font-size: 1.2vw;
 }
 
 h1 {
-  margin-bottom: 7px;  
+    margin-bottom: 7px;
 }
 
 p {
 
-  line-height: 1.6;     
-  padding: 10px;        
+    line-height: 0.5;
+    padding: 10px;
 }
 
-    display: flex;               
-    justify-content: center;    
-    align-items: center;        
-    flex-direction: column;     
-    text-align: center;         
+/* My Photos gallery */
+
+#my-photos {
+    padding-top: 160px;
+    width: 100%;
+    text-align: center;
+}
+
+.gallery-title {
+    margin-bottom: 100px;
+    font-size: 3vw;
+    color: #333;
+}
+
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.photo-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-gallery img {
+
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.photo-gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* My Signature */
+
+.signature-title {
+    margin-bottom: 50px;
+    font-size: 3vw;
+    color: #333;
+}
+
+#my-signature img {
+    margin-top: 20px;
+}
+
+#home-page {
+    position: relative;
+    background-image: url('./public/photos/Homepage.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100%;
+    padding: 60px 20px;
+    border-radius: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#home-page::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(38, 30, 30, 0.4);
+    z-index: 0;
+    border-radius: 10px;
+}
+
+#home-page * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Align lists (My Work Names + Project Links) left */
+
+.mywork-title {
+    margin-bottom: 50px;
+    font-size: 3vw;
+    color: #333;
+}
+
+.left-list {
+    text-align: left;
+    margin: 0 auto;
+    padding-left: 10px;
+    max-width: 800px;
+    font-size: 1.9rem;
+    line-height: 1.5;
+}
+
+
+.left-list li {
+    margin-bottom: 8px;
+}
+
+/* Align lists (Project Links) left */
+
+.projectlinks-title {
+    margin-bottom: 50px;
+    font-size: 3vw;
+    color: #333;
+}
+
+.left-list {
+    text-align: left;
+    margin: 0 auto;
+    padding-left: 10px;
+    max-width: 800px;
+    font-size: 1.9rem;
+    line-height: 1.5;
+}
+
+/* Screen shot */
+
+.screenshots-title {
+    margin-bottom: 50px;
+    font-size: 3vw;
+    color: #333;
+}
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 10px;
+}
+
+.photo-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Screen shot */
+
+.homepage-title {
+    margin-bottom: 50px;
+    font-size: 3vw;
+    color: #333;
+}
+
+
+/* Login Modal styles */
+
+.modal {
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#loginForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#loginForm input {
+    margin-bottom: 12px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#loginForm button {
+    padding: 10px;
+    background-color: #2e5d63;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#loginForm button:hover {
+    background-color: #1b4045;
+}
+
+.modal {
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.modal-content button {
+    margin: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Modal text  */
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 90%;
+    width: 300px;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.modal-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    word-break: break-word;
 }
