@@ -1,4 +1,5 @@
 // Section control
+
 function showSection(id) {
     const sectionIds = [
         'dashboard', 'work-name', 'screenshots', 'project-links',
@@ -14,6 +15,7 @@ function showSection(id) {
 }
 
 // DOM elements
+
 const loginBtn = document.getElementById("loginBtn");
 const logoutBtn = document.getElementById("logoutBtn");
 const loginModal = document.getElementById("loginModal");
@@ -22,16 +24,19 @@ const mainContent = document.querySelector(".main-content");
 const sidebar = document.querySelector(".sidebar");
 
 // Show login modal
+
 loginBtn.addEventListener("click", () => {
     loginModal.style.display = "flex";
 });
 
 // Close login modal
+
 function closeLoginModal() {
     loginModal.style.display = "none";
 }
 
 // Handle login
+
 function handleLogin(event) {
     event.preventDefault();
 
@@ -46,7 +51,7 @@ function handleLogin(event) {
         message.textContent = "Login successful!";
         setTimeout(() => {
             closeLoginModal();
-            localStorage.setItem("isLoggedIn", "true"); // ✅ Save login state
+            localStorage.setItem("isLoggedIn", "true");
             toggleLoginState(true);
         }, 800);
     } else {
@@ -56,20 +61,23 @@ function handleLogin(event) {
 }
 
 // Logout confirmation
+
 logoutBtn.addEventListener("click", () => {
     logoutModal.style.display = "flex";
 });
 
 // Confirm logout
+
 function confirmLogout(isConfirmed) {
     logoutModal.style.display = "none";
     if (isConfirmed) {
-        localStorage.removeItem("isLoggedIn"); // ✅ Clear login state
+        localStorage.removeItem("isLoggedIn");
         toggleLoginState(false);
     }
 }
 
 // Toggle login/logout view
+
 function toggleLoginState(isLoggedIn) {
     const emailInput = document.getElementById("email");
     const passwordInput = document.getElementById("password");
@@ -95,12 +103,14 @@ function toggleLoginState(isLoggedIn) {
         loginModal.style.display = "flex";
 
         // Hide all content sections
+
         sectionIds.forEach(id => {
             const section = document.getElementById(id);
             if (section) section.style.display = "none";
         });
 
         // Clear login form
+
         if (emailInput) emailInput.value = "";
         if (passwordInput) passwordInput.value = "";
         if (loginMessage) loginMessage.textContent = "";
@@ -108,6 +118,7 @@ function toggleLoginState(isLoggedIn) {
 }
 
 // ✅ Check login state on page load
+
 window.onload = () => {
     const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
     toggleLoginState(isLoggedIn);

@@ -212,28 +212,28 @@ p {
 /* My Photos gallery */
 
 #my-photos {
-    padding-top: 160px;
+    padding-top: 10px;
     width: 100%;
     text-align: center;
 }
 
-.gallery-title {
+.Myphotosgallery-title {
     margin-bottom: 100px;
-    font-size: 3vw;
+    font-size: 3.5vw;
     color: #333;
 }
 
 
-.photo-gallery {
+.Myphotos-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
+    gap: 40px;
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
 }
 
-.photo-gallery img {
+.Myphotos-gallery img {
     width: 100%;
     height: auto;
     border-radius: 10px;
@@ -241,7 +241,7 @@ p {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.photo-gallery img {
+.Myphotos-gallery img {
 
     width: 100%;
     height: 220px;
@@ -252,9 +252,9 @@ p {
 }
 
 
-.photo-gallery img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+.Myphotos-gallery img:hover {
+    transform: scale(1.3);
+    box-shadow: 0 60px 30px rgba(0, 0, 0, 0.3);
 }
 
 /* My Signature */
@@ -351,17 +351,17 @@ p {
     color: #333;
 }
 
-.photo-gallery {
+.screenshots-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 30px;
     width: 100%;
     max-width: 1000px;
     margin: 60px auto;
-    padding: 0 10px;
+    padding: 50 10px;
 }
 
-.photo-gallery img {
+.screenshots-gallery img {
     width: 100%;
     height: auto;
     border-radius: 10px;
@@ -369,13 +369,13 @@ p {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.photo-gallery img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+.screenshots-gallery img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 60px 30px rgba(0, 0, 0, 0.3);
 }
 
 
-/* Screen shot */
+/* Homepage title */
 
 .homepage-title {
     margin-bottom: 50px;
